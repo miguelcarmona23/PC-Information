@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://res.cloudinary.com/dxayftnxb/image/upload/v1579716182/bg-pattern-desktop_j3tu8h.svg);
+    background-size: 60% 100%;
+}
+
+.logo {
+    width: 235px;
+}
+
+.main-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 'header hero' 'main hero' 'main hero' 'footer hero';
+}
+
+.main-container header {
+    grid-area: header;
+    display: grid;
+    align-items: center;
+    height: 15rem;
+    padding: 0 15rem;
+}
+
+.main-container .hero {
+    grid-area: hero;
+    background-image: url('/images/model_portrait.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-container main {
+    grid-area: main;
+    padding: 0 15rem;
+    max-width: 100rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.5rem;
+    font-weight: 400;
+    color: #413a3a;
+}
+
+.main-container main .container-text-heading h1 {
+    text-transform: uppercase;
+    font-size: 5rem;
+    letter-spacing: 1rem;
+    line-height: 1;
+}
+
+.main-container main .container-text-heading h1 .text-heading-highlight {
+    font-weight: 300;
+    color: #FF6992;
+}
+
+.main-container main .container-text-content {
+    padding: 2rem 0;
+}
+
+.main-container main .container-text-content p {
+    color: #ce9797;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.main-container main .form-container form {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.main-container main .form-container form input {
+    width: 100%;
+    padding: 1.3rem;
+    border: 1px solid #ce9797;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.main-container main .form-container form input::placeholder {
+    color: #efdbdd;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.main-container main .form-container form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.5rem;
+    height: 3.75rem;
+    border: none;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, #f8bfbf, #FF6992);
+    box-shadow: 0px 3px 3px #FF6992;
+    transition: box-shadow 0.5s;
+    position: absolute;
+    right: 0;
+}
+
+.main-container main .form-container form button:hover {
+    box-shadow: 0px 3px 3px #413a3a;
+    cursor: pointer;
+}
+
+.main-container main .form-container form .email-error-icon {
+    position: absolute;
+    right: 10rem;
+}
+
+.main-container main .form-container form .email-error-border {
+    border: 1px solid #f96262;
+}
+
+.main-container main .form-container .email-error-text p {
+    padding: 1rem 0 0 1.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #413a3a;
+    color: #f96262;
+}
+
+.main-container main .form-container .hidden {
+    visibility: hidden;
+}
+
+.main-container footer {
+    grid-area: footer;
+    padding: 0 15rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.main-container footer a {
+    color: #ce9797;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    body {
+        background: linear-gradient(135deg, #fff5f5, #fff);
+    }
+    .main-container {
+        grid-template-columns: 2fr;
+        grid-template-rows: 5rem 30rem auto auto;
+        grid-template-areas: 'header' 'hero' 'main' 'footer';
+    }
+    .main-container header {
+        grid-area: header;
+        height: unset;
+        padding: 0 0 0 2rem;
+    }
+    .main-container .hero {
+        grid-area: hero;
+        background-image: url('/images/model_portrait.png');
+    }
+    .main-container main {
+        grid-area: main;
+        padding: 0;
+        text-align: center;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #413a3a;
+    }
+    .main-container main .container-text-heading {
+        padding: 6rem 4rem 3rem 2rem;
+    }
+    .main-container main .container-text-heading h1 {
+        font-size: 3rem;
+    }
+    .main-container main .container-text-content {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    .main-container main .form-container {
+        padding: 0 2rem 0 2rem;
+    }
+    .main-container main .form-container form input {
+        padding: 0.8rem;
+    }
+    .main-container main .form-container form button {
+        width: 4rem;
+        height: 2.75rem;
+    }
+    .main-container footer {
+        margin: 0;
+        padding: 2rem 4rem;
+        grid-area: footer;
+    }
+}
